@@ -1,27 +1,20 @@
-def workspace;
-node
-{
-    stage('Checkout')
-    {
-        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '0e58c990-80af-43ea-9f55-85c176bba12b', url: 'https://github.com/rkidambi11/maven.git']]])
-        workspace =pwd()
+node {
+    stage('scm checkout for api test'){
+    git credentialsId: '2bf8a43e-4698-4cd4-a5b5-4109e16794b9', url: 'https://github.com/rkidambi11/maven.git'
+}
+    stage ('maven package'){
+    echo " API package will going to start"
+    def mvnHome=tool name: 'M3', type: 'maven'
+    sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
     }
- 
-    stage('Static Code Analysis')
-    {
-        echo "Static Code Analysis"
-    }
-    stage('Build')
-    {
-        echo "Build the code"
-    }
-    stage('Unit Testing')
-    {
-        echo "Unit Testing"
-    }
-    stage ('Delivery')
-    {
-        echo "Devliver the Code"
-    }
-
+    stage('Test')   {
+   //Perform test
+   echo 'Execute the script'
+    def mvnHome=tool name: 'M3', type: 'maven'
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore test"
+  }
+  stage('Results') {
+  junit '**/target/surefire-reports/TEST-*.xml'
+  archive 'target/*.jar'
+}
 }
