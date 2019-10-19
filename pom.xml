@@ -6,11 +6,11 @@
 
   <groupId>com.mkyong.common</groupId>
 
-  <artifactId>ParasDevOpsproject</artifactId>
+  <artifactId>InfoDevOpsproject</artifactId>
 
   <packaging>jar</packaging>
 
-  <version>2.1</version>
+  <version>4.1</version>
 
   <name>ParasDevOps</name>
 
