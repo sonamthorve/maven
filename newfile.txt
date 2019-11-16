@@ -1,2 +1,0 @@
-creating for to let pollscm knows 
-creating a file from git
