@@ -5,12 +5,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.mkyong.common</groupId>
-
+	  
   <artifactId>InfoDevOpsproject</artifactId>
 
   <packaging>jar</packaging>
 
-  <version>6.1-SNAPSHOT</version>
+  <version>7.1-SNAPSHOT</version>
 
   <name>ParasDevOps</name>
 
