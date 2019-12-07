@@ -10,9 +10,9 @@
 
   <packaging>jar</packaging>
 
-  <version>7.1-SNAPSHOT</version>
+  <version>7.2</version>
 
-  <name>ParasDevOps</name>
+  <name>sonamdevops</name>
 
   <!--url>http://maven.apache.org</url-->
 
@@ -62,7 +62,7 @@
 
       <name>spring-releases</name>
 
-      <url>http://ec2-13-127-144-163.ap-south-1.compute.amazonaws.com:8081/nexus/content/repositories/spring-releases/</url>
+      <url>http://ec2-18-219-16-122.us-east-2.compute.amazonaws.com:8081/nexus/content/repositories/spring-releases/</url>
 
     </repository>
 
@@ -72,7 +72,7 @@
 
       <name>spring-snapshots</name>
 
-      <url>http://ec2-13-127-144-163.ap-south-1.compute.amazonaws.com:8081/nexus/content/repositories/spring-snapshots/</url>
+      <url>http://ec2-18-219-16-122.us-east-2.compute.amazonaws.com:8081/nexus/content/repositories/spring-snapshots/</url>
 
     </snapshotRepository>
 
