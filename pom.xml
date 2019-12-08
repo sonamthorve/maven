@@ -10,7 +10,7 @@
 
   <packaging>jar</packaging>
 
-  <version>7.3-SNAPSHOT</version>
+  <version>7.8</version>
 
   <name>sonamdevops</name>
 
@@ -52,17 +52,17 @@
 
 <profile>
 
-     <id>practice_Deployy</id>
+     <id>Practice_Snapshots</id>
 
  <distributionManagement>
 
     <repository>
 
-      <id>Practice_Releases</id>
+      <id>Practice_1</id>
 
       <name>Practice_Releases</name>
 
-      <url>http://ec2-18-219-16-122.us-east-2.compute.amazonaws.com:8081/nexus/content/repositories/Practice_Releases/</url>
+      <url>http://ec2-18-219-16-122.us-east-2.compute.amazonaws.com:8081/nexus/content/repositories/Practice_1/</url>
 
     </repository>
 
